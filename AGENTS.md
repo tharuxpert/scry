@@ -2,6 +2,26 @@
 
 macOS Swift app built with XcodeGen and SwiftLint.
 
+## Fork-only development
+
+This checkout independently maintains `tharuxpert/scry`. Keep all new development,
+commits, branches, pushes, issues, and pull requests confined to that fork.
+
+- `origin` must point to `https://github.com/tharuxpert/scry.git`; `main` tracks
+  `origin/main`. Start future work from the fork's `main`.
+- `upstream` points to `giacomoguidotto/scry` for read-only reference. Keep its push
+  URL disabled. Do not push, open or edit pull requests/issues, comment, merge,
+  tag, release, or change settings in the original repository unless the user
+  explicitly authorizes a specific upstream action.
+- Leave upstream PRs #45 and #46 and their source branches (`fix/ocr-completion`
+  and `fix/force-click-lookup`) unchanged unless the user specifically requests
+  an update. Future fork work must use different branches.
+- Specify `--repo tharuxpert/scry` for GitHub CLI operations; do not rely on
+  automatic repository selection for a fork. Verify the push destination before
+  pushing and push only the requested branch, without automatic tags.
+- Keep automatic tagging and release publishing disabled for this fork.
+  Creating a release requires an explicit user request.
+
 ## Workflow
 
 Run all three checks and fix any failures before considering the task done:
